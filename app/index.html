@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DealBeacon — Real Black Friday Deals, Checked Today</title>
+<meta name="description" content="30 real Black Friday 2026 deals, each checked at its store on Nov 27, 2026, with sale price, usual price, discount and an honest verdict.">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="brand">
+    <span class="brand-mark">DB</span>
+    <div>
+      <h1>DealBeacon</h1>
+      <p class="tagline">Real Black Friday deals, checked today — not inflated prices dressed up as bargains.</p>
+    </div>
+  </div>
+  <p class="dateline">Black Friday 2026 · Friday, Nov 27 · Prices checked Nov 27, 2026 · Cyber Monday ends Nov 30</p>
+</header>
+
+<main>
+  <section class="stats" aria-label="Sale at a glance">
+    <div class="stat"><span class="stat-num" id="stat-deals">30</span><span class="stat-label">verified deals</span></div>
+    <div class="stat"><span class="stat-num" id="stat-saved">$0.00</span><span class="stat-label">total savings if you bought one of each</span></div>
+    <div class="stat"><span class="stat-num" id="stat-biggest">-0%</span><span class="stat-label">biggest cut · <span id="stat-biggest-name"></span></span></div>
+    <div class="stat"><span class="stat-num" id="stat-lows">0</span><span class="stat-label">verified all-time lows</span></div>
+  </section>
+
+  <section class="controls" aria-label="Find a deal">
+    <label class="search-label">Search
+      <input id="search" type="search" placeholder="Try “AirPods”, “OLED”, “vacuum”…">
+    </label>
+    <div class="control-row">
+      <label>Store
+        <select id="store-filter"></select>
+      </label>
+      <label>Minimum discount
+        <select id="discount-filter">
+          <option value="0">Any discount</option>
+          <option value="20">20% off or more</option>
+          <option value="30">30% off or more</option>
+          <option value="40">40% off or more</option>
+          <option value="50">50% off or more</option>
+        </select>
+      </label>
+      <label>Sort by
+        <select id="sort-select">
+          <option value="score">Best deal first</option>
+          <option value="discount">Biggest % off</option>
+          <option value="savings">Most dollars saved</option>
+          <option value="price-low">Lowest price</option>
+          <option value="price-high">Highest price</option>
+        </select>
+      </label>
+    </div>
+    <div id="category-chips" class="chips" role="group" aria-label="Filter by category"></div>
+    <p id="result-count" class="result-count" aria-live="polite">Showing all 30 deals, best first</p>
+  </section>
+
+  <section id="deal-grid" class="deal-grid" aria-label="Deals"></section>
+
+  <section id="compare" class="compare" aria-label="Same deal, two stores">
+    <h2>Same deal, two stores</h2>
+    <p>Before you buy, we checked the identical product at a second store. Most Black Friday prices match everywhere — the rare gap is worth knowing.</p>
+    <table>
+      <thead>
+        <tr><th>Product</th><th>Store A</th><th>Store B</th><th>Winner</th></tr>
+      </thead>
+      <tbody id="compare-body"></tbody>
+    </table>
+  </section>
+
+  <section class="method" aria-label="How deals were checked">
+    <h2>How a deal earns its badge</h2>
+    <ul>
+      <li><strong>NEW LOW</strong> — the named source called it the product's lowest price ever. Only 12 of 30 deals earn it.</li>
+      <li><strong>STRONG DEAL</strong> — 40% or more off the usual price, with the cut confirmed at the store.</li>
+      <li><strong>GOOD DEAL</strong> — 20–39% off. A real saving, not a record.</li>
+      <li><strong>FAIR DEAL</strong> — under 20% off. Worth buying if you needed it anyway, not worth rushing for.</li>
+    </ul>
+    <p>Every price on this page was read on Nov 27, 2026 from the deals source named on its card, which names the store. Each discount is computed from the two prices shown, so the math always adds up. Store links open the store's own search for the exact product. Prices move during Black Friday week — the store's page is the final word.</p>
+    <p class="honest-note">What we did not do: no deal here is a guess, a placeholder, or a price from before the sale. The Nintendo Switch 2 bundle is only 9% off — it stays on the page because the bundle is the console at its own price with the game free, and the card says so.</p>
+  </section>
+</main>
+
+<footer>
+  <p>DealBeacon — an original deal finder built for the make.fun Black Friday bounty. Prices checked Nov 27, 2026. Product names and store names belong to their owners; links go to the stores.</p>
+</footer>
+
+<script type="module" src="./finder.js"></script>
+</body>
+</html>
