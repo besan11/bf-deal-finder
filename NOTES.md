@@ -30,7 +30,7 @@ renders and filters).
 
 ## Verdicts, honestly
 
-- NEW LOW (12 deals): only where the named source called the price an
+- NEW LOW (13 deals): only where the named source called the price an
   all-time low. The code never upgrades a deal by itself.
 - STRONG DEAL: 40%+ off. GOOD DEAL: 20–39%. FAIR DEAL: under 20%.
 - Deliberately kept on the page even though the cut is small: Nintendo
